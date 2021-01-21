@@ -17,6 +17,7 @@ function Header() {
           <S.Cart>
             <S.CartImage src={cart} alt="Cart" />
             <S.Price>€0,00</S.Price>
+            <S.ItemCount>1</S.ItemCount>
           </S.Cart>
         </S.SideBlock>
       </S.Container>

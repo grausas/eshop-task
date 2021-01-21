@@ -66,3 +66,20 @@ export const Logo = styled.img`
     max-height: 50px;
   }
 `;
+
+export const ItemCount = styled.div`
+  position: absolute;
+  left: 25%;
+  top: 5%;
+  padding: 3px 3px;
+  font-weight: 600;
+  background: #e22e39;
+  color: #fff;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 14px;
+  font-size: 14px;
+  border-radius: 10px;
+  z-index: 999;
+`;
