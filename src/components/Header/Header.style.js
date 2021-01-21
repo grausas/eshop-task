@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 export const Header = styled.header`
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background: #fff;
   padding: 0 10px;
   border-bottom: 1px solid #e6e6e6;
+  z-index: 100;
 `;
 
 export const Container = styled.div`

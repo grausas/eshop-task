@@ -1,5 +1,5 @@
 import React from "react";
-import { Product } from "../../components";
+import { Product, Cart } from "../../components";
 import * as S from "./Home.style";
 
 function Home() {
@@ -8,6 +8,9 @@ function Home() {
       <S.Wrapper>
         <Product />
       </S.Wrapper>
+      <S.SideBar>
+        <Cart />
+      </S.SideBar>
     </S.Container>
   );
 }

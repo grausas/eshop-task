@@ -32,13 +32,14 @@ export const ProductTitle = styled.div`
   width: 100%;
   height: 70px;
   margin-top: 8px;
+  margin-bottom: 4px;
   line-height: 1.2;
   font-size: 0.95em;
 `;
 
 export const ProductPrice = styled.div`
   color: #e22e39;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: 600;
   margin-bottom: 20px;
 `;
@@ -54,5 +55,5 @@ export const Favorite = styled.img`
 export const ButtonBlock = styled.div`
   margin: 0 auto;
   text-align: center;
-  width: 80%;
+  width: 85%;
 `;
