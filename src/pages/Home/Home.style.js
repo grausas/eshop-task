@@ -9,6 +9,10 @@ export const Container = styled.div`
   box-sizing: border-box;
 
   @media (max-width: ${({ theme }) => theme.laptop}) {
+    padding: 53px 0 0 0;
+  }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
     padding: 53px 12px 0 0;
   }
 `;
@@ -18,10 +22,10 @@ export const Wrapper = styled.div`
   width: 100%;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding-right: 10px;
+  padding: 0 10px;
   @media (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
-    padding-right: 0;
+    padding: 0;
   }
 `;
 
