@@ -10,9 +10,11 @@ export const Button = styled.button`
       ? props.theme.primary.color
       : props.theme.secondary.color};
   outline: none;
+  font-size: 0.8em;
+  font-weight: 600;
   border: none;
-  border-radius: 5px;
-  padding: 0.5em 2em;
+  border-radius: ${(props) => (props.color === "primary" ? "10px" : "25px")};
+  padding: 0.7em 2em;
   cursor: pointer;
   &:hover {
     background: ${(props) =>

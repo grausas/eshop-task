@@ -15,9 +15,7 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const MainBlock = styled.div`
-  max-width: 1000px;
-`;
+export const MainBlock = styled.div``;
 
 export const SideBlock = styled.div`
   display: flex;

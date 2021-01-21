@@ -10,8 +10,8 @@ const theme = {
     },
   },
   secondary: {
-    background: "#eeeeee",
-    color: "#222222",
+    background: "#e22e39",
+    color: "#fff",
     hover: {
       background: "#e8e8e8",
     },
