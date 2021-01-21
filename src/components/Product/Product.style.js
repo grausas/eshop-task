@@ -33,6 +33,7 @@ export const ProductTitle = styled.div`
   height: 70px;
   margin-top: 8px;
   line-height: 1.2;
+  font-size: 0.95em;
 `;
 
 export const ProductPrice = styled.div`
