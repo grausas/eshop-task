@@ -61,6 +61,7 @@ export const Price = styled.span`
 
 export const Logo = styled.img`
   max-height: 70px;
+  padding-left: 10px;
 
   @media (max-width: ${({ theme }) => theme.laptop}) {
     max-height: 50px;
@@ -82,4 +83,8 @@ export const ItemCount = styled.div`
   font-size: 14px;
   border-radius: 10px;
   z-index: 999;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    display: none;
+  }
 `;

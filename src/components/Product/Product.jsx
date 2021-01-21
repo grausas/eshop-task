@@ -1,22 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button } from "../index";
 import * as S from "./Product.style";
 import like from "../../assets/like.png";
 import { products } from "../../utils/productsData";
+import { CartContext } from "../../contexts/cart.context";
 
-function Product() {
+function Product({ className }) {
+  const cart = useContext(CartContext);
+
   return (
     <>
       {products &&
         products.map((product) => (
-          <S.ProductBlock key={product.id}>
+          <S.ProductBlock key={product.id} className={className}>
             <S.Product>
               <S.Favorite src={like} />
               <S.ProductImage src={product.image} alt="Product image" />
               <S.ProductTitle>{product.title}</S.ProductTitle>
               <S.ProductPrice>€{product.price}</S.ProductPrice>
               <S.ButtonBlock>
-                <Button>Į krepšelį</Button>
+                {products.id ? (
+                  "none"
+                ) : (
+                  <Button
+                    handleClick={() =>
+                      cart.setProducts(() => cart.products.concat(product.id))
+                    }
+                  >
+                    Į krepšelį
+                  </Button>
+                )}
               </S.ButtonBlock>
             </S.Product>
           </S.ProductBlock>

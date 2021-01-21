@@ -43,7 +43,7 @@ export const ProductImage = styled.img`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     position: relative;
     float: left;
-    max-width: 150px;
+    max-width: 120px;
     width: 100%;
   }
 `;
@@ -59,7 +59,9 @@ export const ProductTitle = styled.div`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     text-align: left;
     max-width: 95%;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 0.8em;
   }
 `;
 
@@ -70,7 +72,7 @@ export const ProductPrice = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 150px;
+    width: 120px;
     text-align: center;
     position: absolute;
     bottom: 10px;
@@ -96,6 +98,6 @@ export const ButtonBlock = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     float: right;
-    max-width: 40%;
+    max-width: 55%;
   }
 `;
