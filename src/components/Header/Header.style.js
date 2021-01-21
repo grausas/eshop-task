@@ -1,28 +1,53 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const Header = styled.header`
+  width: 100%;
+  background: #fff;
+  padding: 0 10px;
+`;
+
+export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  max-width: 1340px;
+  width: 100%;
+  margin: 0 auto;
+`;
+
+export const MainBlock = styled.div`
+  max-width: 1000px;
+`;
+
+export const SideBlock = styled.div`
+  display: flex;
+  max-width: 340px;
+  width: 100%;
+`;
+
+export const Cart = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 42px;
+  border: 1px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 0 16px;
+`;
+
+export const CartImage = styled.img`
+  height: 20px;
+`;
+
+export const Price = styled.span`
+  font-weight: 700;
+  font-size: 0.8em;
+  line-height: 16px;
+  margin-left: 0.8em;
 `;
 
 export const Logo = styled.img`
-  max-height: 40px;
+  max-height: 70px;
   max-width: 100%;
-`;
-
-export const Actions = styled.nav``;
-
-export const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #111;
-  text-transform: uppercase;
-  &:hover {
-    text-decoration: underline;
-  }
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
 `;
