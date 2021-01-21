@@ -29,4 +29,8 @@ export const Button = styled.button`
         ? props.theme.primary.focus.background
         : props.theme.secondary.focus.background};
   }
+
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    padding: 1em;
+  }
 `;

@@ -6,9 +6,9 @@ export const Header = styled.header`
   left: 0;
   width: 100%;
   background: #fff;
-  padding: 0 10px;
   border-bottom: 1px solid #e6e6e6;
   z-index: 100;
+  box-sizing: border-box;
 `;
 
 export const Container = styled.div`
@@ -26,6 +26,11 @@ export const SideBlock = styled.div`
   display: flex;
   max-width: 340px;
   width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    flex-direction: row-reverse;
+    width: 0;
+  }
 `;
 
 export const Cart = styled.div`
@@ -37,6 +42,10 @@ export const Cart = styled.div`
   border: 1px solid #d9d9d9;
   border-radius: 25px;
   padding: 0 16px;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    border: none;
+  }
 `;
 
 export const CartImage = styled.img`
@@ -52,5 +61,8 @@ export const Price = styled.span`
 
 export const Logo = styled.img`
   max-height: 70px;
-  max-width: 100%;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    max-height: 50px;
+  }
 `;

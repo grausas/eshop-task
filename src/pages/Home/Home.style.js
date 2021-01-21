@@ -3,19 +3,26 @@ import styled from "styled-components";
 export const Container = styled.div`
   position: relative;
   max-width: 1340px;
-  padding-top: 75px;
+  padding: 85px 350px 0 10px;
   width: 100%;
   margin: 0 auto;
-  padding-right: 350px;
   box-sizing: border-box;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    padding: 53px 12px 0 0;
+  }
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  padding: 10px 0 10px 10px;
   box-sizing: border-box;
+  padding-right: 10px;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    flex-direction: column;
+    padding-right: 0;
+  }
 `;
 
 export const SideBar = styled.div`

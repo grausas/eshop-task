@@ -13,12 +13,14 @@ const theme = {
     background: "#e22e39",
     color: "#fff",
     hover: {
-      background: "#e8e8e8",
+      background: "#b22f2e",
     },
     focus: {
-      background: "#e3e3e3",
+      background: "#b22f2e",
     },
   },
+  mobile: "768px",
+  laptop: "1100px",
 };
 
 export default theme;

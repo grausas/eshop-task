@@ -24,8 +24,7 @@ export const products = [
     id: 4,
     image:
       "https://www.barbora.lt/api/images/GetInventoryImage?id=9f3f948f-db8e-4398-bd01-6ffca11bd156",
-    title:
-      "Ypač tyras alyvuogių aliejus COIMBRA PREMIUM (rūgšting.0,2%), 750 ml",
+    title: "Ypač tyras alyvuogių aliejus COIMBRA PREMIUM  750 ml",
     price: 5.69,
   },
   {
