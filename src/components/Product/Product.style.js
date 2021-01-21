@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 export const ProductBlock = styled.div`
-  width: 25%;
-  border: 1px solid #e6e6e6;
+  width: calc(25% - 15px);
+  box-sizing: border-box;
+  margin: 0px 10px 15px 10px;
+  &:nth-child(4n + 1) {
+    margin-left: 0;
+  }
+  &:nth-child(4n) {
+    margin-right: 0;
+  }
 `;
 
 export const Product = styled.div`
@@ -13,6 +20,7 @@ export const Product = styled.div`
   padding: 30px 10px 15px 10px;
   background: #fff;
   text-align: center;
+  border: 1px solid #e6e6e6;
 `;
 
 export const ProductImage = styled.img`
@@ -40,4 +48,10 @@ export const Favorite = styled.img`
   position: absolute;
   top: 10px;
   right: 10px;
+`;
+
+export const ButtonBlock = styled.div`
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
 `;

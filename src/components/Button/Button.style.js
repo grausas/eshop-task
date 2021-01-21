@@ -10,6 +10,7 @@ export const Button = styled.button`
       ? props.theme.primary.color
       : props.theme.secondary.color};
   outline: none;
+  width: 100%;
   font-size: 0.8em;
   font-weight: 600;
   border: none;

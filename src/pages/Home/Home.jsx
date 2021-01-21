@@ -1,18 +1,14 @@
 import React from "react";
-import { Button, Section } from "../../components";
+import { Product } from "../../components";
+import * as S from "./Home.style";
 
 function Home() {
   return (
-    <>
-      <Section background="e3e3e3">
-        Welcome to your React boilerplate. We hope that this will bring you up
-        to speed with your development
-      </Section>
-      <Section>This boilerplate uses storybook and React</Section>
-      <Section>
-        <Button color="primary">Check react Out</Button>
-      </Section>
-    </>
+    <S.Container>
+      <S.Wrapper>
+        <Product />
+      </S.Wrapper>
+    </S.Container>
   );
 }
 
