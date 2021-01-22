@@ -35,7 +35,7 @@ export const BuyBlock = styled.div`
 
 export const ButtonBlock = styled.div`
   height: 50px;
-  flex: 4;
+  flex: 3;
   opacity: 0.5;
   font-size: 1.2em;
 `;
@@ -46,18 +46,21 @@ export const PriceBlock = styled.div`
   flex-direction: column;
   justify-content: space-around;
   margin-left: 30px;
+  text-align: left;
 
   span:nth-child(1) {
+    position: relative;
     font-size: 0.75em;
 
     img {
-      float: right;
+      position: absolute;
       width: 12px;
+      left: 40px;
     }
   }
 
   span:nth-child(2) {
-    font-size: 1.2em;
-    font-weight: 600;
+    font-size: 1.1em;
+    font-weight: 700;
   }
 `;

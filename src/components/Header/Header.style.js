@@ -80,9 +80,9 @@ export const ItemCount = styled.div`
   height: 14px;
   text-align: center;
   line-height: 14px;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 10px;
-  z-index: 999;
+  z-index: 11;
 
   @media (max-width: ${({ theme }) => theme.laptop}) {
     display: none;
