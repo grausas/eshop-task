@@ -6,7 +6,7 @@ import { products } from "../../utils/productsData";
 import { CartContext } from "../../contexts/cart.context";
 
 function Product({ className }) {
-  const cart = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   return (
     <>
@@ -22,11 +22,7 @@ function Product({ className }) {
                 {products.id ? (
                   "none"
                 ) : (
-                  <Button
-                    handleClick={() =>
-                      cart.setProducts(() => cart.products.concat(product.id))
-                    }
-                  >
+                  <Button handleClick={() => addToCart(product)}>
                     Į krepšelį
                   </Button>
                 )}

@@ -6,7 +6,7 @@ import cartImg from "../../assets/cart-desktop.png";
 import { CartContext } from "../../contexts/cart.context";
 
 function Header() {
-  const cart = useContext(CartContext);
+  const { cart } = useContext(CartContext);
 
   return (
     <S.Header>
@@ -20,9 +20,7 @@ function Header() {
           <S.Cart>
             <S.CartImage src={cartImg} alt="Cart" />
             <S.Price>€0.00</S.Price>
-            {cart.products.length > 0 && (
-              <S.ItemCount>{cart.products.length}</S.ItemCount>
-            )}
+            {cart.length > 0 && <S.ItemCount>{cart.length}</S.ItemCount>}
           </S.Cart>
         </S.SideBlock>
       </S.Container>
