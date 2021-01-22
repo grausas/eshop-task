@@ -14,8 +14,8 @@ export const Button = styled.button`
   font-size: 0.8em;
   font-weight: 600;
   border: none;
-  border-radius: ${(props) => (props.color === "primary" ? "10px" : "25px")};
-  padding: 0.7em 2em;
+  border-radius: ${(props) => (props.color === "primary" ? "5px" : "25px")};
+  height: 100%;
   cursor: pointer;
   &:hover {
     background: ${(props) =>
@@ -28,9 +28,5 @@ export const Button = styled.button`
       props.color === "primary"
         ? props.theme.primary.focus.background
         : props.theme.secondary.focus.background};
-  }
-
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 1em 1.5em;
   }
 `;

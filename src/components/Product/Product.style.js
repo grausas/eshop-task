@@ -95,9 +95,11 @@ export const ButtonBlock = styled.div`
   text-align: center;
   max-width: 85%;
   width: 100%;
+  height: 30px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     float: right;
-    max-width: 55%;
+    max-width: 50%;
+    height: 45px;
   }
 `;

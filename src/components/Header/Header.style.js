@@ -70,7 +70,7 @@ export const Logo = styled.img`
 
 export const ItemCount = styled.div`
   position: absolute;
-  left: 25%;
+  left: 25px;
   top: 5%;
   padding: 3px 3px;
   font-weight: 600;

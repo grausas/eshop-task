@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const CartBlock = styled.div`
   position: fixed;
   background: #f6f6f8;
-  width: 340px;
+  width: 330px;
   top: 73px;
   bottom: 0;
   box-sizing: border-box;
