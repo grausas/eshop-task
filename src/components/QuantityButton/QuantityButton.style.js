@@ -29,6 +29,12 @@ export const DecreaseButton = styled.button`
   border: 1px solid #d9d9d9;
   background: #fff;
   border-radius: 20px 0 0 20px;
+  &:hover {
+    background: #eaeaeb;
+  }
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const IncreaseButton = styled.button`
@@ -37,4 +43,10 @@ export const IncreaseButton = styled.button`
   border: 1px solid #d9d9d9;
   background: #fff;
   border-radius: 0 20px 20px 0;
+  &:hover {
+    background: #eaeaeb;
+  }
+  &:focus {
+    outline: none;
+  }
 `;
