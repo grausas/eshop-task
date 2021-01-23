@@ -8,7 +8,7 @@ export const ProductBlock = styled.div`
   border-top: 2px solid #f2f2f3;
   box-sizing: border-box;
   background: #fff;
-  padding: 16px 10px;
+  padding: 10px;
 `;
 
 export const ProductImage = styled.img`
@@ -48,7 +48,8 @@ export const ProductDetails = styled.div`
 `;
 export const DeleteIcon = styled.img`
   position: absolute;
-  top: 16px;
+  top: 10px;
   right: 10px;
   width: 12px;
+  cursor: pointer;
 `;

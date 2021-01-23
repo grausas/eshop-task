@@ -9,6 +9,8 @@ export const CartBlock = styled.div`
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
   overflow-y: auto;
+  /* transform: ${({ isSidebarOpen }) =>
+    isSidebarOpen ? "translateX(0)" : "translateX(0)"}; */
 
   span {
     font-size: 0.8em;
@@ -16,7 +18,9 @@ export const CartBlock = styled.div`
   }
 
   @media (max-width: ${({ theme }) => theme.laptop}) {
-    display: ${({ open }) => (open ? "block" : "none")};
+    display: ${({ isSidebarOpen }) => (isSidebarOpen ? "block" : "none")};
+    width: 100%;
+    top: 50px;
   }
 `;
 
@@ -37,6 +41,10 @@ export const BuyBlock = styled.div`
   padding: 30px 15px 20px 15px;
   background: #fff;
   box-sizing: border-box;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    width: 100%;
+  }
 `;
 
 export const ButtonBlock = styled.div`

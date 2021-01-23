@@ -34,4 +34,8 @@ export const SideBar = styled.div`
   position: absolute;
   right: 0;
   top: 0;
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    width: 100%;
+  }
 `;
