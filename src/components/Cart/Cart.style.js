@@ -32,7 +32,8 @@ export const ProductsBlock = styled.div`
 
 export const BuyBlock = styled.div`
   display: flex;
-  position: relative;
+  position: fixed;
+  width: 330px;
   padding: 30px 15px 20px 15px;
   background: #fff;
   box-sizing: border-box;

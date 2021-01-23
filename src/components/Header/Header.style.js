@@ -56,7 +56,7 @@ export const Price = styled.span`
   font-weight: 700;
   font-size: 0.8em;
   line-height: 16px;
-  margin-left: 0.8em;
+  margin-left: 1em;
 `;
 
 export const Logo = styled.img`
