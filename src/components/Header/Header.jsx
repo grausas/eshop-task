@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import * as S from "./Header.style";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
@@ -6,7 +6,14 @@ import cartImg from "../../assets/cart-desktop.png";
 import { CartContext } from "../../contexts/cart.context";
 
 function Header() {
-  const { cart } = useContext(CartContext);
+  const { cart, totalAmount, openSidebar } = useContext(CartContext);
+  const [price, setPrice] = useState();
+
+  useEffect(() => {
+    if (cart) {
+      setPrice(totalAmount(cart));
+    }
+  }, [cart, totalAmount]);
 
   return (
     <S.Header>
@@ -17,9 +24,9 @@ function Header() {
           </Link>
         </S.MainBlock>
         <S.SideBlock>
-          <S.Cart>
+          <S.Cart onClick={openSidebar}>
             <S.CartImage src={cartImg} alt="Cart" />
-            <S.Price>€0.00</S.Price>
+            <S.Price>€{price ? price : "0,00"}</S.Price>
             {cart.length > 0 && <S.ItemCount>{cart.length}</S.ItemCount>}
           </S.Cart>
         </S.SideBlock>

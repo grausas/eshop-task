@@ -9,8 +9,6 @@ export const CartBlock = styled.div`
   box-sizing: border-box;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.13);
   overflow-y: auto;
-  /* transform: ${({ isSidebarOpen }) =>
-    isSidebarOpen ? "translateX(0)" : "translateX(0)"}; */
 
   span {
     font-size: 0.8em;

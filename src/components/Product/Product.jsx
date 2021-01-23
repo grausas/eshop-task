@@ -1,26 +1,32 @@
 import React, { useContext } from "react";
-import { Button } from "../index";
+import { Button, QuantityButton } from "../index";
 import * as S from "./Product.style";
-import like from "../../assets/like.png";
-import { products } from "../../utils/productsData";
+import likeIcon from "../../assets/like.png";
 import { CartContext } from "../../contexts/cart.context";
 
-function Product({ className }) {
-  const { addToCart } = useContext(CartContext);
+function Product({ data, className }) {
+  const { cart, addToCart, decreaseFromCart } = useContext(CartContext);
 
   return (
     <>
-      {products &&
-        products.map((product) => (
+      {data &&
+        data.map((product) => (
           <S.ProductBlock key={product.id} className={className}>
             <S.Product>
-              <S.Favorite src={like} />
+              <S.Favorite src={likeIcon} />
               <S.ProductImage src={product.image} alt="Product image" />
               <S.ProductTitle>{product.title}</S.ProductTitle>
               <S.ProductPrice>€{product.price}</S.ProductPrice>
               <S.ButtonBlock>
-                {products.id ? (
-                  "none"
+                {product.quantity &&
+                cart.find((item) => item.id === product.id) ? (
+                  <QuantityButton
+                    quantity={product.quantity}
+                    handleIncrease={() => addToCart(product)}
+                    handleDecrease={() => {
+                      decreaseFromCart(product);
+                    }}
+                  />
                 ) : (
                   <Button handleClick={() => addToCart(product)}>
                     Į krepšelį
