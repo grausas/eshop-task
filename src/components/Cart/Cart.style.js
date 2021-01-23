@@ -20,6 +20,10 @@ export const CartBlock = styled.div`
   }
 `;
 
+export const EmptyCart = styled.div`
+  font-weight: 700;
+`;
+
 export const ProductsBlock = styled.div`
   height: calc(100% - 100px);
   padding: 20px 16px;
@@ -28,6 +32,7 @@ export const ProductsBlock = styled.div`
 
 export const BuyBlock = styled.div`
   display: flex;
+  position: relative;
   padding: 30px 15px 20px 15px;
   background: #fff;
   box-sizing: border-box;

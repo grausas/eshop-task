@@ -19,7 +19,6 @@ export const ProductBlock = styled.div`
 `;
 
 export const Product = styled.div`
-  position: relative;
   display: flex;
   flex-direction: column;
   position: relative;
