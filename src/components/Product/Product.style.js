@@ -60,7 +60,6 @@ export const ProductTitle = styled.div`
     text-align: left;
     max-width: 95%;
     margin-top: 0;
-    margin-bottom: 30px;
     font-size: 0.8em;
   }
 `;

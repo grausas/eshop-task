@@ -11,7 +11,7 @@ function QuantityButton({ quantity, handleIncrease, handleDecrease }) {
           <S.Icons src={minus} alt="minus" />
         </S.DecreaseButton>
         <S.Quantity>
-          <span quantity={quantity}>{quantity} vnt.</span>
+          <div quantity={quantity}>{quantity} vnt.</div>
         </S.Quantity>
         <S.IncreaseButton onClick={handleIncrease}>
           <S.Icons src={add} alt="add" />
