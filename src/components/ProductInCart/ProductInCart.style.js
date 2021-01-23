@@ -21,14 +21,14 @@ export const InfoBlock = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+
   margin-left: 10px;
 `;
 
 export const ProductTitle = styled.div`
-  margin-bottom: 4px;
   font-size: 0.9em;
   padding-right: 20px;
-  margin-bottom: 8px;
 `;
 
 export const ProductDetails = styled.div`
@@ -36,6 +36,7 @@ export const ProductDetails = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  height: 30px;
 
   span:nth-child(1) {
     border: 1px solid #d9d9d9;

@@ -1,10 +1,17 @@
 import React, { useContext } from "react";
 import * as S from "./ProductInCart.style";
+import { QuantityButton } from "../index";
 import deleteIcon from "../../assets/delete.svg";
 import { CartContext } from "../../contexts/cart.context";
 
 function ProductInCart({ data }) {
-  const { deleteFromCart } = useContext(CartContext);
+  const {
+    cart,
+    deleteFromCart,
+    isSidebarOpen,
+    addToCart,
+    decreaseFromCart,
+  } = useContext(CartContext);
   return (
     <>
       {data &&
@@ -20,7 +27,18 @@ function ProductInCart({ data }) {
                 <span>{item.title}</span>
               </S.ProductTitle>
               <S.ProductDetails>
-                <span>{item.quantity} vnt.</span>
+                {isSidebarOpen ? (
+                  item.quantity &&
+                  cart.map((product) => item.id === product.id) ? (
+                    <QuantityButton
+                      handleIncrease={() => addToCart(item)}
+                      handleDecrease={() => decreaseFromCart(item)}
+                      quantity={item.quantity}
+                    />
+                  ) : null
+                ) : (
+                  <span>{item.quantity} vnt.</span>
+                )}
                 <span>€{(item.price * item.quantity).toFixed(2)}</span>
               </S.ProductDetails>
             </S.InfoBlock>
