@@ -26,9 +26,10 @@ export const Product = styled.div`
   background: #fff;
   text-align: center;
   border: 1px solid #e6e6e6;
+  box-sizing: border-box;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
-    padding: 10px 10px 10px 0;
+    padding: 10px;
     width: 100%;
     display: inline-block;
     height: 100%;
@@ -68,7 +69,6 @@ export const ProductPrice = styled.div`
   color: #e22e39;
   font-size: 1.6em;
   font-weight: 600;
-  margin-bottom: 20px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     width: 120px;
@@ -90,15 +90,30 @@ export const Favorite = styled.img`
 `;
 
 export const ButtonBlock = styled.div`
+  position: relative;
   margin: 0 auto;
   text-align: center;
   max-width: 85%;
   width: 100%;
   height: 30px;
+  margin-top: 30px;
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     float: right;
     max-width: 50%;
     height: 45px;
+  }
+`;
+
+export const Quantity = styled.span`
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  font-size: 0.65em;
+  color: #e22e39;
+
+  span {
+    font-weight: 700;
   }
 `;

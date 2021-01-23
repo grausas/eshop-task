@@ -20,13 +20,18 @@ function Product({ data, className }) {
               <S.ButtonBlock>
                 {product.quantity &&
                 cart.find((item) => item.id === product.id) ? (
-                  <QuantityButton
-                    quantity={product.quantity}
-                    handleIncrease={() => addToCart(product)}
-                    handleDecrease={() => {
-                      decreaseFromCart(product);
-                    }}
-                  />
+                  <>
+                    <S.Quantity>
+                      Krepšelyje <span>{product.quantity} vnt.</span>
+                    </S.Quantity>
+                    <QuantityButton
+                      quantity={product.quantity}
+                      handleIncrease={() => addToCart(product)}
+                      handleDecrease={() => {
+                        decreaseFromCart(product);
+                      }}
+                    />
+                  </>
                 ) : (
                   <Button handleClick={() => addToCart(product)}>
                     Į krepšelį

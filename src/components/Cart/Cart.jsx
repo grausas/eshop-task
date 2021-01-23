@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import * as S from "./Cart.style";
-import { Button, ProductInCart, Product } from "../index";
+import { Button, ProductInCart } from "../index";
 import info from "../../assets/info.svg";
 import { CartContext } from "../../contexts/cart.context";
 
@@ -20,12 +20,7 @@ function Cart() {
         <S.ProductsBlock>
           {cart.length ? (
             <>
-              <span>Krepšelis</span>{" "}
-              {!isSidebarOpen ? (
-                <ProductInCart data={cart} />
-              ) : (
-                <Product data={cart} />
-              )}
+              <span>Krepšelis</span> <ProductInCart data={cart} />
             </>
           ) : (
             <S.EmptyCart>Krepšelis tuščias</S.EmptyCart>
