@@ -5,13 +5,9 @@ import deleteIcon from "../../assets/delete.svg";
 import { CartContext } from "../../contexts/cart.context";
 
 function ProductInCart({ data }) {
-  const {
-    cart,
-    deleteFromCart,
-    isSidebarOpen,
-    addToCart,
-    decreaseFromCart,
-  } = useContext(CartContext);
+  const { cart, deleteFromCart, addToCart, decreaseFromCart } = useContext(
+    CartContext
+  );
   return (
     <>
       {data &&
