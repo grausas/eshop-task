@@ -43,9 +43,11 @@ export const Cart = styled.div`
   border-radius: 25px;
   padding: 0 16px;
   cursor: pointer;
+  pointer-events: none;
 
   @media (max-width: ${({ theme }) => theme.laptop}) {
     border: none;
+    pointer-events: auto;
   }
 `;
 

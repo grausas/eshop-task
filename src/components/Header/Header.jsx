@@ -25,14 +25,9 @@ function Header() {
           </Link>
         </S.MainBlock>
         <S.SideBlock>
-          <S.Cart>
+          <S.Cart onClick={openSidebar}>
             <S.CartImage src={cartImg} alt="Cart" className="desktop" />
-            <S.CartImage
-              onClick={openSidebar}
-              src={baksetImg}
-              alt="Basket"
-              className="laptop"
-            />
+            <S.CartImage src={baksetImg} alt="Basket" className="laptop" />
             <S.Price>€{price ? price : "0,00"}</S.Price>
             {cart.length > 0 && <S.ItemCount>{cart.length}</S.ItemCount>}
           </S.Cart>
