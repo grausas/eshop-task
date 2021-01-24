@@ -27,6 +27,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     padding: 0;
   }
+
+  &.wrapper {
+    display: ${({ isSidebarOpen }) => (isSidebarOpen ? "flex" : "flex")};
+  }
 `;
 
 export const SideBar = styled.div`
