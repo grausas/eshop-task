@@ -86,6 +86,7 @@ export const Favorite = styled.img`
   position: absolute;
   top: 10px;
   right: 10px;
+  pointer-events: none;
 `;
 
 export const ButtonBlock = styled.div`
