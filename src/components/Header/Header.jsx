@@ -3,6 +3,7 @@ import * as S from "./Header.style";
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.png";
 import cartImg from "../../assets/cart-desktop.png";
+import baksetImg from "../../assets/basket.png";
 import { CartContext } from "../../contexts/cart.context";
 
 function Header() {
@@ -24,8 +25,14 @@ function Header() {
           </Link>
         </S.MainBlock>
         <S.SideBlock>
-          <S.Cart onClick={openSidebar}>
-            <S.CartImage src={cartImg} alt="Cart" />
+          <S.Cart>
+            <S.CartImage src={cartImg} alt="Cart" className="desktop" />
+            <S.CartImage
+              onClick={openSidebar}
+              src={baksetImg}
+              alt="Basket"
+              className="laptop"
+            />
             <S.Price>€{price ? price : "0,00"}</S.Price>
             {cart.length > 0 && <S.ItemCount>{cart.length}</S.ItemCount>}
           </S.Cart>

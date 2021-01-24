@@ -51,6 +51,21 @@ export const Cart = styled.div`
 
 export const CartImage = styled.img`
   height: 20px;
+  &.desktop {
+    display: block;
+  }
+  &.laptop {
+    display: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    &.desktop {
+      display: none;
+    }
+    &.laptop {
+      display: block;
+    }
+  }
 `;
 
 export const Price = styled.span`

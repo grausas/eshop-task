@@ -42,6 +42,7 @@ export const ProductDetails = styled.div`
     border: 1px solid #d9d9d9;
     padding: 5px 15px;
   }
+
   span:nth-child(2) {
     color: #e22e39;
     font-weight: 700;
