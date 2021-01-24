@@ -58,7 +58,7 @@ export const ProductTitle = styled.div`
 
   @media (max-width: ${({ theme }) => theme.mobile}) {
     text-align: left;
-    max-width: 95%;
+    max-width: 92%;
     margin-top: 0;
     font-size: 0.8em;
   }
