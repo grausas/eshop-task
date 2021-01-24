@@ -1,4 +1,4 @@
-# :mortar_board: Eshop
+# :credit_card: Eshop
 
 This Eshop project was created only for demo purposes.
 
@@ -7,7 +7,7 @@ This Eshop project was created only for demo purposes.
 - React.js - front end
 - Styled components - for styling
 
-## :mag:
+## :mag: Demo
 
 You can see demo version here:
 
