@@ -27,18 +27,18 @@ function ProductInCart({ data }) {
                 <span>{item.title}</span>
               </S.ProductTitle>
               <S.ProductDetails>
-                {isSidebarOpen ? (
-                  item.quantity &&
-                  cart.map((product) => item.id === product.id) ? (
+                {item.quantity &&
+                cart.map((product) => item.id === product.id) ? (
+                  <>
                     <QuantityButton
                       handleIncrease={() => addToCart(item)}
                       handleDecrease={() => decreaseFromCart(item)}
                       quantity={item.quantity}
+                      className="quantityChange"
                     />
-                  ) : null
-                ) : (
-                  <span>{item.quantity} vnt.</span>
-                )}
+                    <span>{item.quantity} vnt.</span>
+                  </>
+                ) : null}
                 <span>
                   €
                   {(item.price * item.quantity)

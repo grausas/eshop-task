@@ -28,8 +28,10 @@ export const Wrapper = styled.div`
     padding: 0;
   }
 
-  &.wrapper {
-    display: ${({ isSidebarOpen }) => (isSidebarOpen ? "flex" : "flex")};
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    &.wrapper {
+      display: ${({ isSidebarOpen }) => (isSidebarOpen ? "none" : "flex")};
+    }
   }
 `;
 

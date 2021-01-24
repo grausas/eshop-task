@@ -5,7 +5,7 @@ import { products } from "../../utils/productsData";
 import likeIcon from "../../assets/like.png";
 import { CartContext } from "../../contexts/cart.context";
 
-function Product({ data, className }) {
+function Product({ className }) {
   const { cart, addToCart, decreaseFromCart } = useContext(CartContext);
 
   return (

@@ -35,7 +35,9 @@ function Cart() {
               Kaina
               <img src={info} alt="info" />
             </span>
-            <span>€{price ? price : "0,00"}</span>
+            <span>
+              €{price ? price.toString().replace(/\./g, ",") : "0,00"}
+            </span>
           </S.PriceBlock>
         </S.BuyBlock>
       </S.CartBlock>

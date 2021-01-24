@@ -7,11 +7,9 @@ function Home() {
   const { isSidebarOpen } = useContext(CartContext);
   return (
     <S.Container>
-      {!isSidebarOpen && (
-        <S.Wrapper className="wrapper">
-          <Product />
-        </S.Wrapper>
-      )}
+      <S.Wrapper className="wrapper" isSidebarOpen={isSidebarOpen}>
+        <Product />
+      </S.Wrapper>
 
       <S.SideBar>
         <Cart />

@@ -38,14 +38,31 @@ export const ProductDetails = styled.div`
   width: 100%;
   height: 30px;
 
-  span:nth-child(1) {
-    border: 1px solid #d9d9d9;
-    padding: 5px 15px;
+  @media (max-width: ${({ theme }) => theme.laptop}) {
+    div:first-child {
+      display: none;
+    }
+  }
+
+  div:first-child {
+    display: none;
+    @media (max-width: ${({ theme }) => theme.laptop}) {
+      display: inherit;
+    }
+  }
+
+  span:nth-child(3) {
+    color: #e22e39;
+    font-weight: 700;
   }
 
   span:nth-child(2) {
-    color: #e22e39;
-    font-weight: 700;
+    border: 1px solid #d9d9d9;
+    color: #3b3b3b;
+    padding: 5px 15px;
+    @media (max-width: ${({ theme }) => theme.laptop}) {
+      display: none;
+    }
   }
 `;
 export const DeleteIcon = styled.img`
