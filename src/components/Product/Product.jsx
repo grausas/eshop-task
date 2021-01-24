@@ -20,7 +20,7 @@ function Product({ data, className }) {
               <S.ProductPrice>€{product.price}</S.ProductPrice>
               <S.ButtonBlock>
                 {product.quantity &&
-                cart.map((item) => item.id === product.id) ? (
+                cart.find((item) => item.id === product.id) ? (
                   <>
                     <S.Quantity>
                       Krepšelyje <span>{product.quantity} vnt.</span>
