@@ -17,7 +17,9 @@ function Product({ data, className }) {
               <S.Favorite src={likeIcon} />
               <S.ProductImage src={product.image} alt="Product image" />
               <S.ProductTitle>{product.title}</S.ProductTitle>
-              <S.ProductPrice>€{product.price}</S.ProductPrice>
+              <S.ProductPrice>
+                €{product.price.toString().replace(/\./g, ",")}
+              </S.ProductPrice>
               <S.ButtonBlock>
                 {product.quantity &&
                 cart.find((item) => item.id === product.id) ? (

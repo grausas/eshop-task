@@ -39,7 +39,13 @@ function ProductInCart({ data }) {
                 ) : (
                   <span>{item.quantity} vnt.</span>
                 )}
-                <span>€{(item.price * item.quantity).toFixed(2)}</span>
+                <span>
+                  €
+                  {(item.price * item.quantity)
+                    .toFixed(2)
+                    .toString()
+                    .replace(/\./g, ",")}
+                </span>
               </S.ProductDetails>
             </S.InfoBlock>
           </S.ProductBlock>
